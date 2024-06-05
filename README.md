@@ -3,20 +3,15 @@
 This Flask application calculates the suspicion score of a given URL based on various criteria including URL structure analysis, content analysis, SSL/TLS certificate analysis, and domain reputation checking. It helps identify potentially suspicious URLs that may pose security risks such as phishing attacks.
 Installation
 
-    Clone the repository:
 
-bash
-
+clone this repository: 
 git clone (https://github.com/tadash10/Phishing-Detector)
     Navigate to the project directory:
 
-bash
 
 cd url-suspicion-score-calculator
 
-    Install dependencies:
-
-bash
+ Install dependencies:
 
 pip install -r requirements.txt
 
@@ -24,8 +19,6 @@ Usage
 Command Line Interface (CLI)
 
     Run the Flask application:
-
-bash
 
 python app.py
 
