@@ -7,8 +7,7 @@ Installation
 
 bash
 
-git clone https://github.com/your_username/url-suspicion-score-calculator.git
-
+git clone (https://github.com/tadash10/Phishing-Detector)
     Navigate to the project directory:
 
 bash
