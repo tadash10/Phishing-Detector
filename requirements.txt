@@ -1,4 +1,7 @@
-Flask==2.0.1
-tldextract==3.1.2
-requests==2.26.0
-beautifulsoup4==4.10.0
+Flask
+Flask-Caching
+Flask-Limiter
+tldextract
+requests
+beautifulsoup4
+whois
