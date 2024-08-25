@@ -1,0 +1,16 @@
+your_project/
+│
+├── app/
+│   ├── __init__.py
+│   ├── routes.py
+│   ├── utils.py
+│   ├── config.py
+│   └── templates/
+│       ├── index.html
+│       ├── result.html
+│       ├── 404.html
+│       └── 500.html
+│
+├── Dockerfile
+├── requirements.txt
+└── run.py
