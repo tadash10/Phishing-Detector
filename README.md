@@ -8,49 +8,129 @@ clone this repository:
 git clone (https://github.com/tadash10/Phishing-Detector)
     Navigate to the project directory:
 
+Project Overview
 
-cd url-suspicion-score-calculator
+Purpose: The project is a Flask web application that evaluates the suspicion level of a given URL. It provides a suspicion score based on several factors such as URL structure, SSL/TLS certificate information, and domain reputation. This can be useful for identifying potentially fraudulent or insecure websites.
 
- Install dependencies:
+Features:
 
-pip install -r requirements.txt
+    URL Structure Analysis: Checks the length and format of the URL.
+    Content Analysis: Looks for security-related elements like password fields and forms on the webpage.
+    SSL/TLS Certificate Check: Assesses the SSL certificate issuer to detect if it’s from a trusted Certificate Authority (CA).
+    Domain Information: Evaluates the domain's age using WHOIS information to assess its legitimacy.
 
-Usage
-Command Line Interface (CLI)
+How It Works:
 
-    Run the Flask application:
+    User Input: A user submits a URL through a web form.
+    URL Validation: The URL is validated to ensure it is correctly formatted.
+    Suspicion Score Calculation: The application calculates a suspicion score based on the URL structure, content, SSL certificate, and domain age.
+    Results Display: The suspicion score is displayed on the results page.
 
-python app.py
+Step-by-Step Installation and Usage on Windows 11
+1. Install Python
 
-    Open a web browser and go to http://localhost:5000.
+Ensure Python 3.8 or later is installed on your Windows 11 system. If not, download and install it from the official Python website.
 
-    Enter a URL in the provided form and submit to view the suspicion score.
+    Download Python Installer: Go to Python Downloads and download the latest version for Windows.
+    Run Installer: Run the installer and make sure to check the box for "Add Python to PATH". Then, click "Install Now".
 
-Windows Command Prompt (CMD)
+2. Set Up a Virtual Environment
 
-    Run the Flask application:
+Open Command Prompt or Windows Terminal and follow these steps:
+
+    Create a Project Directory:
+
+    cmd
+
+mkdir url_suspicion_checker
+cd url_suspicion_checker
+
+Create a Virtual Environment:
 
 cmd
 
-python app.py
+python -m venv venv
 
-    Open a web browser and go to http://localhost:5000.
+Activate the Virtual Environment:
 
-    Enter a URL in the provided form and submit to view the suspicion score.
+cmd
 
-Functionality
+    venv\Scripts\activate
 
-    URL Structure Analysis: Detects patterns in the URL that might indicate suspicious behavior such as long sequences of random characters, excessive subdomains, or uncommon URL paths.
+    You should see (venv) at the beginning of the command line, indicating that the virtual environment is active.
 
-    Content Analysis: Fetches the content of the webpage corresponding to the URL and analyzes it for signs of phishing, such as requests for sensitive information, suspicious links, or deceptive content.
+3. Install Dependencies
 
-    SSL/TLS Certificate Analysis: Checks the validity and issuer of the SSL/TLS certificate associated with the URL to assess the trustworthiness of the website.
+With the virtual environment activated, install the required Python packages:
 
-    Domain Reputation Checking: Queries domain reputation databases or services to assess the reputation of the domain and flag domains with a history of malicious activity.
+    Create a requirements.txt file with the following content:
 
-Contributing
+    text
 
-Contributions are welcome! If you have any suggestions, feature requests, or bug reports, please open an issue or submit a pull request.
-License
+Flask
+Flask-Caching
+Flask-Limiter
+tldextract
+requests
+beautifulsoup4
+whois
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+Install the packages:
+
+cmd
+
+    pip install -r requirements.txt
+
+4. Set Up the Project
+
+    Create the Project Files and Directories:
+
+    You can either create the files manually or copy the code from the previous response into appropriate files within the url_suspicion_checker directory.
+        app/__init__.py
+        app/routes.py
+        app/utils.py
+        app/config.py
+        app/errors.py
+        app/templates/index.html
+        app/templates/result.html
+        app/templates/404.html
+        app/templates/500.html
+        Dockerfile (if using Docker)
+        requirements.txt
+        run.py
+
+    Add Content to Files:
+
+    Copy and paste the provided code snippets into the respective files. Ensure that your directory structure matches the one described.
+
+5. Run the Application
+
+    Start the Flask Application:
+
+    With the virtual environment activated, run the Flask application:
+
+    cmd
+
+    python run.py
+
+    The Flask application will start, and you should see output indicating that the server is running, typically on http://127.0.0.1:5000/.
+
+    Access the Application:
+
+    Open a web browser and go to http://127.0.0.1:5000/ to access the application.
+        Homepage: You will see a form where you can enter a URL.
+        Results Page: After submitting a URL, the application will display the suspicion score and any relevant information.
+
+6. Troubleshooting
+
+    If the Application Doesn’t Start:
+        Ensure all dependencies are installed correctly.
+        Check the app.log file for error messages and resolve any issues indicated.
+
+    If You Encounter Errors with SSL or WHOIS:
+        Ensure network connectivity and correct configuration.
+        Verify that the required ports are open and not blocked by a firewall.
+
+Summary
+
+By following these steps, you will have a functional Flask application running locally on your Windows 11 system. This application helps evaluate the suspicion level of URLs by analyzing various aspects such as URL structure, SSL certificates, and domain information.
