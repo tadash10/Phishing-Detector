@@ -1,6 +1,6 @@
 # Phishing-Detector
 
-This Flask application calculates the suspicion score of a given URL based on various criteria including URL structure analysis, content analysis, SSL/TLS certificate analysis, and domain reputation checking. It helps identify potentially suspicious URLs that may pose security risks such as phishing attacks.
+This Flask application calculates the suspicion score of a given URL based on various criteria including URL structure analysis, content analysis, SSL/TLS certificate analysis, and domain reputation checking. It helps identify potentially suspicious URLs that may pose security risks such as phishing attacks. automatic bot coming soon 
 Installation
 
 
