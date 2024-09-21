@@ -1,0 +1,23 @@
+PhishingDetector/
+│
+├── app/                            # Main application package
+│   ├── __init__.py                 # Initialize the Flask app
+│   ├── config.py                   # Configuration settings (including API keys)
+│   ├── routes.py                   # Define application routes
+│   ├── utils.py                    # Utility functions (e.g., URL analysis, VirusTotal integration)
+│   ├── errors.py                   # Custom error handling
+│   └── templates/                  # HTML templates
+│       ├── index.html              # Main page for URL input
+│       └── result.html             # Results display page
+│
+├── tests/                           # Unit and integration tests
+│   ├── __init__.py                 # Initialize the tests package
+│   ├── test_utils.py               # Tests for utility functions
+│   ├── test_routes.py              # Tests for application routes
+│   └── test_integration.py          # Integration tests
+│
+├── requirements.txt                 # Python dependencies
+├── .gitignore                       # Files and directories to ignore in Git
+├── README.md                        # Project documentation and instructions
+├── LICENSE                          # License information
+└── run.py                           # Entry point for running the application
